@@ -7,6 +7,7 @@ Variables
 ID of the subject (30 subjects)
 Activity label : Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying
 Mean and standard deviation of measurements from : Accelerometer (units : g), Gyroscope (units : radians/second)
+
 Getting and cleaning data
 
 The data should be already downloaded in a local directory. The data for the project is available at :
@@ -15,14 +16,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 The script run_analysis.R does the following :
 
-Get the data from local directory
+Get the data  and load to global environment
 Build a data set for the Activities
-Build a data set for the Measurements
-Build a data set for the Subjects
-Merge data (Subjects, Activities and Measurements)
-Extract only the measurements for the mean and standard deviation
-Create an aggregate data set (mean)
-Write output files
+Build a data set for the Measurements/ Features
+Merge data  to create one dataset(Subjects, Activities and Measurements)    
+Get the measurements for the mean and standard deviation  
+Create an aggregate dataset (mean) 
+Create final 2 csv files for means
+Create txt file to upload
 
 Additional package required : No
 
@@ -32,10 +33,11 @@ After extracting the mean and standard deviation of the measurements, the number
 
 By aggregating by subject and activities, the final data set has 180 rows (30 subjects and 6 activities) and 68 variables.
 
-Two files is produce :
+Two files are produced :
 
 tidy.csv : Data set with only the mean and standard deviation for each measurement (10 299 rows by 563 variables).
 tidy.mean.csv : Aggregate using mean for each activity and each subject (180 rows by 68 variables).
+
 Experimental study design used
 
 The description of the experimental study design is available at :
